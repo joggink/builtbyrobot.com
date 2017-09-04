@@ -16,6 +16,26 @@
 		padding: 0;
 		list-style-type: none;
 	}
+
+	ul li {
+		display: inline;
+	}
+
+	ul li::before {
+		content: ', ';
+	}
+
+	ul li:first-of-type::before {
+		content: none;
+	}
+
+	ul li:last-of-type::before {
+		content: 'or ';
+	}
+
+	ul li:last-of-type::after {
+		content: '.';
+	}
 </style>
 </head>
 <body>
@@ -29,14 +49,20 @@
 	<hr />
 	<h3>If you wish to contact me</h3>
 	<ul>
-		<li>
-			Feel free to <a href="mailto:jochen@builtbyrobot.com" itemprop="email">send me an email</a>
-		</li>
-		<li>
-			or call me <span itemprop="telephone">+32 494 86 22 81</span>
-		</li>
+		<li>Feel free to <a href="mailto:jochen@builtbyrobot.com" itemprop="email">send me an email</a></li>
+		<li>call me on <span itemprop="telephone">+32 494 86 22 81</span></li>
+		<li>add me on <a href="https://be.linkedin.com/in/joggink">linkedin</a></li>
 	</ul>
 </main>
 
+<script>
+	/* numbers tell the tale */
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-8684278-7', 'auto');
+	ga('send', 'pageview');
+</script>
 </body>
 </html>
